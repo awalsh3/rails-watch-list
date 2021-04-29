@@ -1,6 +1,11 @@
 
 <h5><%= @list.name%></h5>
 
-<p><%= link_to'Add movie', lists_path %></p>
+
+<p><%= link_to'Add movie', new_list_bookmark_path(@list.id) %></p>
 
 <p><%= link_to'Back to all lists', lists_path %></p>
+
+
+
+

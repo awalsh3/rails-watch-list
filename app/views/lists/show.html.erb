@@ -1,9 +1,17 @@
 
 <h5><%= @list.name%></h5>
 
+<% @list.bookmarks.each do|bookmark| %>
+  <ul>
+    <li><%= bookmark.movie.title %></li>
+    <li><%= bookmark.movie.overview %></li>
+    <li><%= bookmark.comment %></li>
+  </ul>
+<% end %>
 
-<p><%= link_to'Add movie', new_list_bookmark_path(@list.id) %></p>
 
+<p><%= link_to'New Bookmark', new_list_bookmark_path(@list.id) %></p>
+<p><%= link_to 'Delete this list', list_path(@list), method: :delete, data: { confirm: 'Are you sure you want to delete this list?' } %> </p>
 <p><%= link_to'Back to all lists', lists_path %></p>
 
 

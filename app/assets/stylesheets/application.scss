@@ -2,6 +2,7 @@
 @import "config/fonts";
 @import "config/colors";
 @import "config/bootstrap_variables";
+@import "config/shared";
 
 // External libraries
 @import "bootstrap/scss/bootstrap";
@@ -11,3 +12,60 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.alert {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 1000;
+}
+
+
+.movie-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-large {
+  height: 50vh;
+}
+
+.cover {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(asset_path('cover.jpg'));
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.typed-js {
+  min-height: 33.6px;
+}
+
+.movie-tag {
+  color: white;
+  padding: 6px 16px;
+  border-radius: 4px;
+  background: #fcbf49;
+  transition: background 0.3s ease;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}

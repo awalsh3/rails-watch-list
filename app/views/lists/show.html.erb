@@ -15,7 +15,8 @@
 <p><%= link_to'Back to all lists', lists_path %></p> -->
 
 <div class="position-relative">
-  <div class="card-category card-large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('list_background.jpg') %>)">
+  <div class="card-category card-large">
+    <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
     <h1><%= @list.name %></h1>
   </div>
     <span class="movie-tag"><%= pluralize(@list.movies.size, 'movie') %></span>

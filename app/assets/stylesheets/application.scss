@@ -23,7 +23,7 @@
 
 .movie-img {
   width: 100%;
-  height: 220px;
+  height: 180px;
   object-fit: cover;
   object-position: center;
 }
@@ -40,6 +40,7 @@
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border: 2px solid red;
 }
 
 .card-large {
@@ -53,6 +54,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  border: 2px solid green;
 }
 
 .typed-js {
@@ -68,4 +70,5 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
+  border: 2px solid red;
 }

@@ -1,23 +1,7 @@
-<!--
-<h5><%= @list.name%></h5>
-
-<% @list.bookmarks.each do|bookmark| %>
-  <ul>
-    <li><%= bookmark.movie.title %></li>
-    <li><%= bookmark.movie.overview %></li>
-    <li><%= bookmark.comment %></li>
-  </ul>
-<% end %>
-
-
-<p><%= link_to'New Bookmark', new_list_bookmark_path(@list.id) %></p>
-<p><%= link_to 'Delete this list', list_path(@list), method: :delete, data: { confirm: 'Are you sure you want to delete this list?' } %> </p>
-<p><%= link_to'Back to all lists', lists_path %></p> -->
-
 <div class="position-relative justify-content-center">
   <div class="card-category card-large">
-    <%= @list.name %>
-    <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+      <%= @list.name %>
+      <%= cl_image_tag(@list.photo.key, height: 300, width: 400, crop: :fill) %>
   </div>
     <span class="movie-tag"><%= pluralize(@list.movies.size, 'movie') %></span>
 </div>
